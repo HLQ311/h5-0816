@@ -1,0 +1,75 @@
+<style>
+    .footerContainer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        border-top: 1px solid #F2F2F2;
+        height: 0.5rem;
+        background-color: #fff;
+        padding: 0 0.16rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .tabs{
+        width: 0.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0.03rem;
+        color: #999;
+        font-size: 0.1rem;
+    }
+    .tabs i{
+        width: 0.25rem;
+        height: 0.25rem;
+        margin-left: 0;
+        background: url(img/tab_index.png) no-repeat;
+        background-size: contain;
+    }
+    .tabs.active span{
+        color: #0093D9;
+    }
+    .tabs.active i{
+        background-image: url(img/tab_index_active.png);
+    }
+    .tabs i.project{
+        background-image: url(img/tab_project.png);
+    }
+    .tabs.active i.project{
+        background-image: url(img/tab_project_active.png);
+    }
+    .tabs i.me{
+        background-image: url(img/tab_me.png);
+    }
+    .tabs.active i.me{
+        background-image: url(img/tab_me_active.png);
+    }
+    .footerContainer img {
+        width: 0.2rem;
+        height: 0.2rem;
+        margin-bottom: 0.01rem;
+    }
+</style>
+<div class="footerContainer" id="footerTab">
+    <a href="javascript:;" class="tabs active">
+        <i></i>
+        <span>肺科学院</span>
+    </a>
+    <a href="javascript:;" class="tabs">
+        <i class="project"></i>
+        <span>项目中心</span>
+    </a>
+    <a href="javascript:;" class="tabs">
+        <i class="me"></i>
+        <span>关于我们</span>
+    </a>
+</div>
+
+<script>
+    $('.tabs').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+</script>

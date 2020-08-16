@@ -1,0 +1,61 @@
+@charset "UTF-8";
+*{
+    box-sizing: border-box;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+
+/* 1rem = 100px */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.14rem;
+    color: #333;
+    font-family: PingFang SC, Microsoft YaHei, SimSun, serif;
+    background: #fff;
+}
+ol, ul, li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+button, input, textarea, select {
+    outline: none;
+    border: none;
+}
+img{
+    vertical-align: middle;
+}
+::-webkit-input-placeholder{
+    color: #c7c7c7;
+}    /* 使用webkit内核的浏览器 */
+:-moz-placeholder{
+    color: #c7c7c7;
+}                  /* Firefox版本4-18 */
+::-moz-placeholder{
+    color: #c7c7c7;
+}                  /* Firefox版本19+ */
+:-ms-input-placeholder{
+    color: #c7c7c7;
+}           /* IE浏览器 */
+
+textarea{
+    resize: none;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+}

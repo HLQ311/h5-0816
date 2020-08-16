@@ -1,0 +1,13 @@
+#sections{
+  padding-bottom: 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.tab_pages{
+  flex: 1;
+  display: none;
+}
+.tab_pages.active{
+  display: block;
+}
