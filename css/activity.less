@@ -1,0 +1,80 @@
+@import "constant";
+body{
+  padding-bottom: 0.5rem;
+}
+.container{
+  overflow: scroll;
+  flex: 1;
+  padding-top: 0.07rem;
+  background-color: #f1f1f1;
+}
+/*新闻卡片*/
+.news_list{
+  padding: 0 0.15rem;
+  background-color: #fff;
+}
+.news_list li:first-child .news_card{
+  border-top: none;
+}
+.news_list li:first-child .big_news_card{
+  border-top: none;
+}
+.news_card{
+  display: flex;
+  align-items: center;
+  padding: 0.15rem 0;
+  border-top: 1px dotted rgba(3,0,0,0.1);
+}
+.news_card img{
+  width: 1.09rem;
+  height: 0.73rem;
+  margin-left: 0.25rem;
+}
+.card_left{
+  flex: 1;
+  height: 0.73rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.04rem;
+  justify-content: space-between;
+}
+.card_left h3{
+  color: #333;
+  font-size: 0.15rem;
+  line-height: 0.18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.card_bottom{
+  color: #999;
+  font-size: 0.11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.card_bottom span{
+  margin: 0 0.08rem;
+}
+.big_news_card{
+  display: block;
+  padding: 0.15rem 0;
+  border-top: 1px dotted rgba(3,0,0,0.1);
+  img{
+    width: 100%;
+    height: 1.34rem;
+  }
+  h3{
+    margin-top: 0.13rem;
+    margin-bottom: 0.1rem;
+    font-size: 0.15rem;
+    color: #333;
+    .line-ellipsis-x(1);
+  }
+}

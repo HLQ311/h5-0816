@@ -39,16 +39,16 @@ img{
     vertical-align: middle;
 }
 ::-webkit-input-placeholder{
-    color: #c7c7c7;
+    color: #999;
 }    /* 使用webkit内核的浏览器 */
 :-moz-placeholder{
-    color: #c7c7c7;
+    color: #999;
 }                  /* Firefox版本4-18 */
 ::-moz-placeholder{
-    color: #c7c7c7;
+    color: #999;
 }                  /* Firefox版本19+ */
 :-ms-input-placeholder{
-    color: #c7c7c7;
+    color: #999;
 }           /* IE浏览器 */
 
 textarea{
