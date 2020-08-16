@@ -3,11 +3,141 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .tab_pages{
   flex: 1;
   display: none;
+  overflow: scroll;
 }
 .tab_pages.active{
   display: block;
 }
+.banner{
+  width: 100%;
+  height: 3.43rem;
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+}
+.main{
+  background-color: #fff;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  margin-top: -0.4rem;
+  position: relative;
+  z-index: 9;
+}
+.grid_container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.21rem 0.22rem 0;
+}
+.grid_container a{
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.grid_container a img{
+  display: block;
+  width: 0.46rem;
+  height: 0.46rem;
+  margin-bottom: 0.06rem;
+}
+.title_container{
+  display: flex;
+  align-items: center;
+  padding: 0 0.18rem;
+  margin-top: 0.25rem;
+}
+.title_icon{
+  width: 0.21rem;
+  height: 0.21rem;
+  margin-right: 0.09rem;
+}
+.title_container h3{
+  font-size: 0.18rem;
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+}
+.title_container a{
+  color: #999;
+  font-size: 0.12rem;
+  display: flex;
+  align-items: center;
+}
+.title_container a img{
+  width: 0.05rem;
+  height: 0.06rem;
+  margin-left: 3px;
+}
+/*新闻卡片*/
+.news_list{
+  padding: 0 0.15rem;
+  background-color: #fff;
+}
+.news_list li:first-child .news_card{
+  border-top: none;
+}
+.news_card{
+  display: flex;
+  align-items: center;
+  padding: 0.15rem 0;
+  border-top: 1px dotted rgba(3,0,0,0.1);
+}
+.news_card img{
+  width: 1.09rem;
+  height: 0.73rem;
+  margin-left: 0.25rem;
+}
+.card_left{
+  flex: 1;
+  height: 0.73rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0.04rem;
+  justify-content: space-between;
+}
+.card_left h3{
+  color: #333;
+  font-size: 0.15rem;
+  line-height: 0.18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.card_bottom{
+  color: #999;
+  font-size: 0.11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.card_bottom span{
+  margin: 0 0.08rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
