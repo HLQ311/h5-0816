@@ -1,0 +1,119 @@
+body {
+  padding-top: 0.1rem;
+  background-color: #f1f1f1;
+}
+.container {
+  flex: 1;
+  background: #fff url(../img/quiz_back.png) no-repeat left bottom / 1.19rem 2.11rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.19rem;
+}
+.quiz_nav {
+  height: 0.37rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 0.17rem 0 0.22rem;
+  display: flex;
+}
+.back_btn {
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../img/back.png) no-repeat;
+  background-size: contain;
+}
+.submit_btn {
+  width: 0.9rem;
+  height: 0.37rem;
+  background-color: #0093D9;
+  color: #fff;
+  line-height: 0.37rem;
+  text-align: center;
+  border-radius: 0.05rem;
+  font-size: 0.18rem;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+.quiz_container {
+  display: flex;
+  padding-top: 0.17rem;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+}
+.quiz_card {
+  border-radius: 0.04rem;
+  box-shadow: 0px 0px 7px 0px rgba(7, 75, 121, 0.1);
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0 0.175rem;
+  flex-shrink: 0;
+  width: 3.4rem;
+}
+.card_header {
+  margin: 0 0.05rem;
+  height: 0.55rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDED;
+  padding: 0 0.16rem;
+}
+.card_header h3 {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.18rem;
+}
+.card_header p {
+  color: #ccc;
+  font-size: 0.18rem;
+}
+.card_header p .current_num {
+  color: #0093D9;
+  font-size: 0.3rem;
+  position: relative;
+  top: 0.02rem;
+}
+.card_content {
+  padding: 0.2rem 0.12rem;
+}
+.question {
+  font-size: 0.18rem;
+  color: #333;
+}
+.question div {
+  margin-bottom: 0.1rem;
+}
+.answers {
+  padding-top: 0.2rem;
+}
+.answers li {
+  background-color: #f7f7f7;
+  color: #999;
+  font-size: 0.18rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  padding: 0 0.23rem;
+  border-radius: 0.05rem;
+  border: 1px solid #E4E4E4;
+  margin-bottom: 0.15rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.answers li:last-child {
+  margin-bottom: 0;
+}
+.answers li .count {
+  margin-right: 0.14rem;
+}
+.answers li.active {
+  color: #6DB543;
+  border-color: #F3B115;
+  background: rgba(243, 177, 21, 0.1);
+}
+/*# sourceMappingURL=quizDetail.css.map */
