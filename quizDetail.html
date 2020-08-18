@@ -190,6 +190,7 @@
         </div>
     </div>
 </div>
+<script src="js/layer.js"></script>
 <script>
     $(function() {
         $('.answers li').click(function() {
@@ -200,16 +201,47 @@
                 $(this).addClass('active')
             }
         })
+        const MAX_COUNTS = 5
+        let currentIndex = 0
         const width = document.body.clientWidth
         $('#submitBtn').click(function() {
+            console.log(currentIndex)
+            if (currentIndex === MAX_COUNTS - 1) {
+                layer.open({
+                    type: 1,
+                    shadeClose: false,
+                    content: `<div class="quiz_pop">
+    <img src="img/finish_quiz.png" alt="">
+    <h2>恭喜您完成考试</h2>
+    <p class="score_desc">本次考试成绩</p>
+    <h1>96分</h1>
+    <p class="quiz_time">用时：15分钟</p>
+    <a href="javascript:;" class="close_btn" id="closeBtn">我知道了</a>
+</div>`,
+                });
+                return
+            }
             $('#scrollContainer').animate({
                 left: '-=' + width + 'px'
+            }, function() {
+                currentIndex++
+                console.log(currentIndex)
             })
         })
         $('#backBtn').click(function() {
+            console.log(currentIndex)
+            if (currentIndex === 0) {
+                return
+            }
             $('#scrollContainer').animate({
                 left: '+=' + width + 'px'
+            }, function() {
+                currentIndex--
+                console.log(currentIndex)
             })
+        })
+        $(document).on('click', '#closeBtn', function() {
+            layer.closeAll()
         })
     })
 </script>
