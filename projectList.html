@@ -10,6 +10,7 @@
     <script src="js/init.js"></script>
 </head>
 <body>
+<div id="searchWrapper"></div>
 <div class="tabs"></div>
     <div class="container">
         <ul class="listView">
@@ -104,6 +105,85 @@
                 </a>
             </li>
         </ul>
+
+    <!--    表单下载    -->
+        <ul class="download_list">
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="download_item">
+                    <img src="img/form_icon.png" alt="" class="form_icon">
+                        <div class="download_content">
+                            <h2>我市召开“医疗保障制度,保障改善民生”新闻发布会</h2>
+                            <p>2020-07-25  14:00</p>
+                        </div>
+                    <img src="img/download.png" alt="" class="download_icon">
+                </a>
+            </li>
+        </ul>
     </div>
+<script src="js/layer.js"></script>
+<script>
+    $(function () {
+        $('#searchWrapper').load('search.html')
+        $('.download_icon').click(function() {
+            layer.open({
+                type: 1,
+                content: '下载已完成',
+                time: 1,
+                shade: false,
+                className: 'toast'
+            })
+        })
+    })
+</script>
 </body>
 </html>

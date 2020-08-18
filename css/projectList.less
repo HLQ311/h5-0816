@@ -10,6 +10,10 @@
 }
 .listView{
   padding: 0.22rem 0.15rem;
+  display: none;
+  &.active{
+    display: block;
+  }
   .list_item{
     margin-bottom: 0.16rem;
     display: flex;
@@ -41,14 +45,60 @@
     margin-left: 0.2rem;
   }
 }
-
-
-
-
-
-
-
-
+.download_list{
+  padding: 0 0.15rem;
+  li{
+    border-bottom: 1px dotted rgba(3,0,0,0.1);
+  }
+}
+.download_item{
+  height: 0.63rem;
+  display: flex;
+  align-items: center;
+}
+.form_icon{
+  width: 0.29rem;
+  height: 0.29rem;
+}
+.download_content{
+  margin: 0 0.18rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  h2{
+    font-size: 0.14rem;
+    color: #333;
+    font-weight: 500;
+    .line-ellipsis-x(1);
+  }
+  p{
+    color: #999;
+    font-size: 0.12rem;
+  }
+}
+.download_icon{
+  width: 0.19rem;
+  height: 0.19rem;
+  margin-right: 0.07rem;
+  cursor: pointer;
+}
+.layui-m-layer1 .toast.layui-m-layerchild{
+  width: 1.58rem;
+  height: 0.46rem;
+  border-radius: 0.05rem;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.19rem;
+  text-align: center;
+  .layui-m-layercont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 0.05rem;
+  }
+}
 
 
 
