@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/trainingDetail.css">
+    <script src="js/jquery.js"></script>
     <script src="js/init.js"></script>
 </head>
 <body>
@@ -49,6 +50,27 @@
             </div>
         </div>
     </div>
-    <a href="javascript:;" class="bottom_btn">立即报名</a>
+    <a href="javascript:;" class="bottom_btn" id="applyBtn">立即报名</a>
+    <script src="js/layer.js"></script>
+    <script>
+        $(function() {
+            $('#applyBtn').click(function() {
+                layer.open({
+                    type: 1,
+                    shadeClose: false,
+                    content: `<div class="apply_pop">
+    <div class="icon_container">
+        <img src="img/apply_success.png" alt="">
+        <p>恭喜报名成功！</p>
+    </div>
+    <a href="javascript:;" class="close_btn" id="closeBtn">我知道了</a>
+</div>`,
+                });
+            })
+            $(document).on('click', '#closeBtn', function() {
+                layer.closeAll()
+            })
+        })
+    </script>
 </body>
 </html>
