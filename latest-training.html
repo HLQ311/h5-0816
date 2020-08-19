@@ -14,8 +14,8 @@
   <a href="javascript:;" class="top_active">最新培训</a>
   <a href="javascript:;">培训资料</a>
 </div>
-   <div class="container">
-     <div class="list">
+   <div class="container" id="scrollView">
+     <div class="list" id="list">
        <div class="item">
          <img src="./img/latest_img.png" alt="" class="user_img">
          <div class="item_content">
@@ -97,6 +97,7 @@
      </div>
    </div>
  <footer id="footer"></footer>
+<script src="js/scrollVIew.js"></script>
 <script>
   $(function() {
     // 操作顶部tab
@@ -108,6 +109,35 @@
         const index = $(this).index()
         $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
       })
+    })
+
+    function fetchData(changeLoadingStatus, appendFunc) {
+      setTimeout(() => {
+        // mock data
+        let data = ''
+        changeLoadingStatus(false); // 必须实现
+        [...new Array(8)].forEach((item, index) => {
+          const itemCard = `<div class="item">
+         <img src="./img/latest_img.png" alt="" class="user_img">
+         <div class="item_content">
+           <span class="item_title">${index}临床研究专题培训【第一期】</span>
+           <span>时间：2020-8-16  14:00</span>
+           <span>地点：8号楼214会议室</span>
+           <span>
+           <img src="./img/jiangshi@2x.png" alt="" class="item_user-icon">
+           刘副院长 | 26人报名
+         </span>
+           <a href="javascript:;" class="item_button">立即报名</a>
+         </div>
+       </div>`
+          data += itemCard
+        })
+        appendFunc(data) // 必须实现
+      }, 500)
+    }
+    $('#scrollView').scrollLoadMore({
+      listId: 'list',
+      getNextPageData: fetchData,
     })
   })
 </script>

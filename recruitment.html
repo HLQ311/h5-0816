@@ -18,8 +18,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <ul class="list">
+    <div class="container" id="scrollView">
+        <ul class="list" id="list">
             <li>
                 <div class="info_top">
                     <div class="item_title">
@@ -114,6 +114,50 @@
     $(function() {
         $('#footer').load('footer.html', function() {
             $('.tabs').eq(1).addClass('active').siblings().removeClass('active')
+        })
+
+        function fetchData(changeLoadingStatus, appendFunc) {
+            setTimeout(() => {
+                // mock data
+                let data = ''
+                changeLoadingStatus(false); // 必须实现
+                [...new Array(3)].forEach((item, index) => {
+                    const itemCard = `<li>
+                <div class="info_top">
+                    <div class="item_title">
+                        <p>
+                            <img src="img/icon_doctor.png" alt="">
+                            <span class="type">${index}儿科医生</span>
+                        </p>
+                        <span class="price">9000-13000元/月</span>
+                    </div>
+                    <div class="desc">
+                        学历：本科<span class="column">|</span>经验：3-5年<span class="column">|</span>招聘人数：招2人
+                    </div>
+                    <div class="desc">工作地点：上海市杨浦区政民路507号</div>
+                </div>
+                <div class="detail_container">
+                    <div class="detail_item">
+                        <p>岗位要求：</p>
+                        <p>1、医学相关专业本科以上，具有三级医疗临床工作经验优先</p>
+                        <p>2、证件齐全，执业证书可变更</p>
+                    </div>
+                    <div class="detail_item">
+                        <p>岗位职责：</p>
+                        <p>1、认真执行各项规章制度和操作规范</p>
+                        <p>2、领导制订本院工作计划，按期布置、检查、汇报</p>
+                        <p>3、负责组织并采 取积极有效措施，保证不断提高医疗质量</p>
+                    </div>
+                </div>
+            </li>`
+                    data += itemCard
+                })
+                appendFunc(data) // 必须实现
+            }, 500)
+        }
+        $('#scrollView').scrollLoadMore({
+            listId: 'list',
+            getNextPageData: fetchData,
         })
     })
 </script>

@@ -10,7 +10,7 @@
     <script src="js/init.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="scrollView">
         <div class="line"></div>
         <div class="scrollView">
 
@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="list">
+            <ul class="list" id="list">
                 <li>
                     <a href="javascript:;" class="list_item active">
                         <img src="img/blue_quiz.png" alt="">
@@ -121,11 +121,43 @@
         </div>
     </div>
     <footer id="footer"></footer>
+    <script src="js/scrollVIew.js"></script>
     <script>
-        $('#footer').load('footer.html', function () {
-            $('.tabs').click(function () {
-                const index = $(this).index()
-                $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
+        $(function() {
+            $('#footer').load('footer.html', function () {
+                $('.tabs').click(function () {
+                    const index = $(this).index()
+                    $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
+                })
+            })
+
+            function fetchData(changeLoadingStatus, appendFunc) {
+                setTimeout(() => {
+                    // mock data
+                    let data = ''
+                    changeLoadingStatus(false); // 必须实现
+                    [...new Array(6)].forEach((item, index) => {
+                        const itemCard = `<li>
+                    <a href="javascript:;" class="list_item">
+                        <img src="img/yellow_quiz.png" alt="">
+                        <div class="quiz_info">
+                            <h2>${index}PX到底是剧毒还是低毒性深爱的</h2>
+                            <div>
+                                <p>考试截止时间：2020-9-14 15:00</p>
+                                <p>考试成绩：86</p>
+                            </div>
+                        </div>
+                        <span class="quiz_btn">已完成</span>
+                    </a>
+                </li>`
+                        data += itemCard
+                    })
+                    appendFunc(data) // 必须实现
+                }, 500)
+            }
+            $('#scrollView').scrollLoadMore({
+                listId: 'list',
+                getNextPageData: fetchData,
             })
         })
     </script>
