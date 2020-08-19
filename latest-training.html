@@ -10,7 +10,10 @@
   <link rel="stylesheet" href="css/latest-training.css">
 </head>
 <body>
-   <div id="tabs"></div>
+<div class="top_tab" id="tabContainer">
+  <a href="javascript:;" class="top_active">最新培训</a>
+  <a href="javascript:;">培训资料</a>
+</div>
    <div class="container">
      <div class="list">
        <div class="item">
@@ -96,11 +99,9 @@
  <footer id="footer"></footer>
 <script>
   $(function() {
-    $('#tabs').load('topTab.html', function() {
-      // 操作顶部tab
-      $(document).on('click', '#tabContainer a', function() {
-        $(this).addClass('top_active').siblings().removeClass('top_active')
-      })
+    // 操作顶部tab
+    $(document).on('click', '#tabContainer a', function() {
+      $(this).addClass('top_active').siblings().removeClass('top_active')
     })
     $('#footer').load('footer.html', function () {
       $('.tabs').click(function () {

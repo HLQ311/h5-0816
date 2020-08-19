@@ -19,6 +19,32 @@
   border-bottom: 1px dotted rgba(3,0,0,0.1);
 
 }
+.top_tab {
+  width: 100%;
+  height: 0.55rem;
+  background: url("../img/latest_bg.png") no-repeat center;
+  background-size: 120% 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.66rem;
+}
+.top_tab>a {
+  width: 0.80rem;
+  height: 0.25rem;
+  text-align: center;
+  line-height: 0.25rem;
+  font-size: 0.15rem;
+  color:rgba(0,147,217,1);
+  text-decoration: underline;
+}
+.top_tab>.top_active{
+  background:rgba(0,147,217,1);
+  border-radius: 0.13rem;
+  color: #fff;
+  text-decoration: none;
+}
 .user_img{
   width: 1.05rem;
   height: 0.76rem;

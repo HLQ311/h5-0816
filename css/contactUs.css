@@ -1,0 +1,110 @@
+.top_tab {
+  width: 100%;
+  height: 0.56rem;
+  background: url("../img/latest_bg.png") no-repeat center;
+  background-size: 120% 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.43rem;
+}
+.top_tab > a {
+  width: 0.8rem;
+  height: 0.25rem;
+  text-align: center;
+  line-height: 0.25rem;
+  font-size: 0.15rem;
+  color: #0093d9;
+  text-decoration: underline;
+}
+.top_tab > .top_active {
+  background: #0093d9;
+  border-radius: 0.13rem;
+  color: #fff;
+  text-decoration: none;
+}
+.container {
+  padding-top: 0.25rem;
+  background-color: #fff;
+  flex: 1;
+  overflow: scroll;
+  padding-bottom: 0.5rem;
+}
+.title {
+  color: #333;
+  font-size: 0.2rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+.title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.62rem;
+  height: 0.02rem;
+  background-color: #0093D9;
+  border-radius: 0.01rem;
+  bottom: -0.06rem;
+  left: 50%;
+  margin-left: -0.31rem;
+}
+.main {
+  box-shadow: 0px 0px 14px 1px rgba(51, 51, 51, 0.1);
+  border-radius: 0.05rem;
+  margin: 0.2rem 0.18rem 0.25rem;
+  padding: 0.12rem;
+}
+.content_text {
+  word-break: break-all;
+  color: #333;
+  font-size: 0.13rem;
+  text-align: justify;
+  line-height: 0.22rem;
+  text-indent: 0.2rem;
+  letter-spacing: 2px;
+}
+.map {
+  margin-top: 0.1rem;
+}
+.map img {
+  width: 100%;
+  height: 2.48rem;
+}
+.address_container {
+  background: url(../img/address_background.png) no-repeat;
+  background-size: contain;
+  height: 0.78rem;
+  width: 100%;
+  padding: 0.13rem 0.17rem 0.13rem 0.08rem;
+  display: flex;
+  align-items: center;
+}
+.phone_btn {
+  width: 0.51rem;
+  height: 0.51rem;
+}
+.phone_btn img {
+  width: 100%;
+  height: 100%;
+}
+.address {
+  flex: 1;
+}
+.address_line {
+  display: flex;
+  align-items: center;
+  color: #0093D9;
+  font-size: 0.12rem;
+  margin-bottom: 0.03rem;
+}
+.address_line:last-child {
+  margin-bottom: 0;
+}
+.address_line img {
+  width: 0.21rem;
+  height: 0.21rem;
+  margin-right: 0.1rem;
+}
+/*# sourceMappingURL=contactUs.css.map */
