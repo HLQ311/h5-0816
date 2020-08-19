@@ -10,7 +10,14 @@
     <script src="js/init.js"></script>
 </head>
 <body>
-    <div id="searchWrapper"></div>
+<div id="searchBar" class="search">
+    <div class="search_bar">
+        <img src="img/search.png" alt="">
+        <div class="input_container">
+            <input type="text" placeholder="搜索关键词">
+        </div>
+    </div>
+</div>
     <div class="container" id="scrollView">
         <ul class="news_list" id="list">
             <li>
@@ -109,7 +116,6 @@
     <script>
         $(function() {
             $('#footer').load('footer.html')
-            $('#searchWrapper').load('search.html')
             function fetchData(changeLoadingStatus, appendFunc) {
                 setTimeout(() => {
                     // mock data
