@@ -5,7 +5,7 @@
     <title>联系我们</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/contactUs.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
     <script src="js/jquery.js"></script>
     <script src="js/init.js"></script>
 </head>
@@ -15,7 +15,14 @@
         <a href="javascript:;">PI介绍</a>
         <a href="javascript:;" class="top_active">联系我们</a>
     </div>
-    <div class="container">
+    <!--  中心简介  -->
+    <div class="top_tab_page">中心简介</div>
+
+    <!--  PI介绍  -->
+    <div class="top_tab_page">PI介绍</div>
+
+    <!--  联系我们  -->
+    <div class="top_tab_page contact_us_container active">
         <h1 class="title">联系我们</h1>
         <div class="main">
             <p class="content_text">
@@ -46,6 +53,8 @@
         $(function() {
             // 操作顶部tab
             $(document).on('click', '#tabContainer a', function() {
+                const index = $(this).index()
+                $('.top_tab_page').eq(index).addClass('active').siblings().removeClass('active')
                 $(this).addClass('top_active').siblings().removeClass('top_active')
             })
             $('#footer').load('footer.html', function () {

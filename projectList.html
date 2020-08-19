@@ -10,10 +10,21 @@
     <script src="js/init.js"></script>
 </head>
 <body>
-<div id="searchWrapper"></div>
-<div class="tabs"></div>
+<div id="searchBar" class="search">
+    <div class="search_bar">
+        <img src="img/search.png" alt="">
+        <div class="input_container">
+            <input type="text" placeholder="搜索关键词">
+        </div>
+    </div>
+</div>
+<div class="top_tab" id="tabContainer">
+    <a href="javascript:;" class="top_active">运行制度</a>
+    <a href="javascript:;">SOP</a>
+    <a href="javascript:;" class="">表单下载</a>
+</div>
     <div class="container">
-        <ul class="listView">
+        <ul class="top_tab_page listView active">
             <li>
                 <a href="javascript:;" class="list_item">
                     <div class="item_left">
@@ -106,8 +117,11 @@
             </li>
         </ul>
 
+    <!--   SOP     -->
+        <ul class="top_tab_page sop_list"></ul>
+
     <!--    表单下载    -->
-        <ul class="download_list">
+        <ul class="top_tab_page download_list">
             <li>
                 <a href="javascript:;" class="download_item">
                     <img src="img/form_icon.png" alt="" class="form_icon">
@@ -170,10 +184,17 @@
             </li>
         </ul>
     </div>
+<footer id="footer"></footer>
 <script src="js/layer.js"></script>
 <script>
     $(function () {
-        $('#searchWrapper').load('search.html')
+        $('#footer').load('footer.html', function () {
+            $('.tabs').eq(1).addClass('active').siblings().removeClass('active')
+            $('.tabs').click(function () {
+                const index = $(this).index()
+                $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
+            })
+        })
         $('.download_icon').click(function() {
             layer.open({
                 type: 1,
@@ -182,6 +203,17 @@
                 shade: false,
                 className: 'toast'
             })
+        })
+        $('#tabContainer a').click(function() {
+            const index = $(this).index()
+            // 表单下载页面显示搜索，其他页面不显示
+            if (index === 2) {
+                $('.search').show()
+            } else {
+                $('.search').hide()
+            }
+            $(this).addClass('top_active').siblings().removeClass('top_active');
+            $('.top_tab_page').eq(index).addClass('active').siblings().removeClass('active');
         })
     })
 </script>

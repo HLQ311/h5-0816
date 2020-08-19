@@ -1,15 +1,71 @@
-.tabs {
-  height: 0.55rem;
+.top_tab {
   width: 100%;
-  background-color: #ff0;
+  height: 0.56rem;
+  background: url("../img/latest_bg.png") no-repeat center;
+  background-size: 120% 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.43rem;
+}
+.top_tab > a {
+  width: 0.8rem;
+  height: 0.25rem;
+  text-align: center;
+  line-height: 0.25rem;
+  font-size: 0.15rem;
+  color: #0093d9;
+  text-decoration: underline;
+}
+.top_tab > .top_active {
+  background: #0093d9;
+  border-radius: 0.13rem;
+  color: #fff;
+  text-decoration: none;
 }
 .container {
   flex: 1;
   overflow: scroll;
+  padding-top: 0.05rem;
+}
+.top_tab_page {
+  display: none;
+}
+.top_tab_page.active {
+  display: block;
+}
+.search {
+  padding: 0.1rem 0.17rem;
+  background-color: #fff;
+  display: none;
+}
+.search_bar {
+  background-color: #F1F1F1;
+  height: 0.33rem;
+  border-radius: 0.17rem;
+  display: flex;
+  align-items: center;
+  padding: 0 0.18rem;
+}
+.search_bar img {
+  width: 0.14rem;
+  height: 0.14rem;
+  margin-right: 0.08rem;
+}
+.input_container {
+  flex: 1;
+  height: 100%;
+}
+.input_container input {
+  color: #333;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #F1F1F1;
 }
 .listView {
   padding: 0.22rem 0.15rem;
-  display: none;
 }
 .listView.active {
   display: block;
