@@ -1,0 +1,121 @@
+.banner {
+  height: 1.9rem;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  background-color: #f4f4f4;
+  margin-top: -0.15rem;
+  border-top-left-radius: 0.18rem;
+  border-top-right-radius: 0.18rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-bottom: 0.5rem;
+}
+.container .title_container {
+  padding: 0.15rem 0.2rem;
+}
+.container h2 {
+  color: #333;
+  font-size: 0.17rem;
+  margin-bottom: 0.1rem;
+}
+.container p {
+  color: #777;
+  font-size: 0.12rem;
+  margin-bottom: 0.06rem;
+}
+.container p:last-child {
+  margin-bottom: 0;
+}
+.main {
+  background-color: #fff;
+  flex: 1;
+  padding: 0.15rem 0.2rem;
+  border-top-left-radius: 0.18rem;
+  border-top-right-radius: 0.18rem;
+}
+.user_container {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+}
+.user_info {
+  margin: 0 0.1rem;
+  flex: 1;
+}
+.user_info h3 {
+  color: #333;
+  font-size: 0.15rem;
+  margin-bottom: 0.05rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.user_info h3 span {
+  color: #999999;
+  font-size: 0.11rem;
+  margin-left: 0.05rem;
+}
+.user_info p {
+  color: #999;
+  font-size: 0.11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.apply_btn {
+  height: 0.29rem;
+  border: 1px solid #0093D9;
+  color: #0093D9;
+  text-align: center;
+  font-size: 0.13rem;
+  line-height: 0.29rem;
+  border-radius: 0.05rem;
+  padding: 0 0.1rem;
+}
+.sections {
+  margin-top: 0.2rem;
+}
+.sections h2 {
+  font-size: 0.16rem;
+  font-weight: 500;
+  font-family: IdeaFonts JueJiangHei;
+  color: #333;
+  margin-bottom: 0.16rem;
+}
+.sections p {
+  font-size: 0.15rem;
+  color: #333;
+  line-height: 0.22rem;
+  text-align: justify;
+  word-break: break-all;
+}
+.bottom_btn {
+  position: fixed;
+  height: 0.5rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color: #0093D9;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.18rem;
+}
+/*# sourceMappingURL=trainingDetail.css.map */
