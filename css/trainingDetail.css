@@ -91,12 +91,24 @@
 .sections {
   margin-top: 0.2rem;
 }
-.sections h2 {
+.sections .html_title {
   font-size: 0.16rem;
-  font-weight: 500;
-  font-family: IdeaFonts JueJiangHei;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  position: relative;
   color: #333;
   margin-bottom: 0.16rem;
+}
+.sections .html_title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.06rem;
+  width: 0.36rem;
+  background: #0093D9;
+  opacity: 0.3;
 }
 .sections p {
   font-size: 0.15rem;

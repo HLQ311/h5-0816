@@ -1,0 +1,79 @@
+.container {
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
+}
+.doctor_container {
+  margin: 0 0.12rem 0.15rem;
+  height: 1.45rem;
+  background: url(../img/quiz_portrait.png) no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.11rem 0;
+}
+.avatar {
+  width: 0.59rem;
+  height: 0.59rem;
+  border-radius: 50%;
+}
+.info_container {
+  margin-top: 0.1rem;
+  padding: 0 0.4rem;
+  padding-right: 0.1rem;
+  align-self: flex-start;
+}
+.info_container b {
+  color: #333;
+  font-weight: bold;
+  font-size: 0.15rem;
+  margin-right: 0.16rem;
+}
+.info_container span {
+  color: #999;
+  font-size: 0.11rem;
+}
+.sub_info {
+  margin-bottom: 0.06rem;
+}
+.expertise {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+.html_container {
+  box-shadow: 0px 0px 7px 1px rgba(8, 75, 122, 0.1);
+  border-radius: 0.07rem;
+  background-color: #fff;
+  margin: 0 0.17rem;
+  padding: 0.18rem 0.13rem;
+}
+.html_title {
+  font-size: 0.16rem;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 0.12rem;
+  color: #333;
+}
+.html_title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.06rem;
+  width: 0.36rem;
+  background: #0093D9;
+  opacity: 0.3;
+}
+.html_title .content {
+  color: #444;
+  font-size: 0.12rem;
+  line-height: 0.22rem;
+  word-break: break-all;
+}
+/*# sourceMappingURL=doctorDetail.css.map */
