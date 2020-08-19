@@ -53,6 +53,50 @@
             </div>
             <div class="quiz_card">
                 <div class="card_header">
+                    <h3>填空题</h3>
+                    <p>
+                        <span class="current_num">2</span>
+                        <span>/10</span>
+                    </p>
+                </div>
+                <div class="card_content">
+                    <div class="question">
+                        <div>肺炎如何治疗?</div>
+                        <div>
+                            肺炎治疗包括抗感染治疗和预防并发症。患有社区获得性肺炎的人通常可以在家中接受药物治疗，具体治疗方式取决于病原菌类型、肺炎严重程度等，常用药物包括
+                            <span class="input_hole active">
+                                <input type="text" maxlength="1" class="input" value="开">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>、
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>和
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                            <span class="input_hole">
+                                <input type="text" maxlength="1" class="input">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz_card">
+                <div class="card_header">
                     <h3>多选题</h3>
                     <p>
                         <span class="current_num">2</span>
@@ -153,40 +197,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="quiz_card">
-                <div class="card_header">
-                    <h3>多选题</h3>
-                    <p>
-                        <span class="current_num">5</span>
-                        <span>/10</span>
-                    </p>
-                </div>
-                <div class="card_content">
-                    <div class="question">
-                        <div>老年肺炎大致有哪些症状?</div>
-                        <div>
-                            多具有发热、咳痰等典型症状，也有少数有症状或无症状。首发症状为呼吸急促及呼吸困难，或有意识障碍、____、____、____等。
-                        </div>
-                    </div>
-                    <ul class="answers">
-                        <li class="active">
-                            <span class="count">A.</span>
-                            嗜睡
-                        </li>
-                        <li>
-                            <span class="count">B.</span>
-                            脱水
-                        </li>
-                        <li>
-                            <span class="count">C.</span>食欲减退
-                        </li>
-                        <li>
-                            <span class="count">D.</span>
-                            失眠多梦
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -242,6 +252,15 @@
         })
         $(document).on('click', '#closeBtn', function() {
             layer.closeAll()
+        })
+        $(document).on('keyup', '.input_hole input', function() {
+            const val = $(this).val()
+            console.log(val)
+            if (val) {
+                $(this).parent().addClass('active')
+            } else {
+                $(this).parent().removeClass('active')
+            }
         })
     })
 </script>

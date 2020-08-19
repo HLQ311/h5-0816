@@ -165,6 +165,38 @@ body{
     margin-top: 0.22rem;
   }
 }
+.input_hole{
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 3px;
+  border: 1px solid #E5E5E5;
+  background-color: #F6F6F6;
+  position: relative;
+  top: 0.07rem;
+  margin-right: 0.03rem;
+  &.active{
+    background-color: rgba(243, 177, 21, 0.1);
+    border-color: #F3B216;
+  }
+  input{
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    text-align: center;
+    color: #F3B216;
+    font-size: 0.18rem;
+    padding-bottom: 0.04rem;
+  }
+}
 .layui-m-layer .layui-m-layermain .layui-m-layerchild{
   border-radius: 0.1rem;
 }
