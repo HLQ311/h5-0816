@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>介绍-副本13</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/init.js"></script>
+</head>
+<body>
+    <div class="top_tab" id="tabContainer">
+        <a href="javascript:;">中心简介</a>
+        <a href="javascript:;">PI介绍</a>
+        <a href="javascript:;" class="top_active">联系我们</a>
+    </div>
+    <!--  中心简介  -->
+    <div class="top_tab_page">中心简介</div>
+
+    <!--  PI介绍  -->
+    <div class="top_tab_page">PI介绍</div>
+
+    <!--  联系我们  -->
+    <div class="top_tab_page contact_us_container active">
+        <h1 class="title">联系我们</h1>
+        <div class="main">
+            <p class="content_text">
+                上海市肺科医院（同济大学附属上海市肺科医院、上海市职业病防治院）创建于1933年，是一家集医疗、教学与科研功能为一体的现代化三级甲等专科教学医院。医院连续获得“上海市文明单位”、“上海市五一劳动奖状”等荣誉，行风政风测评成绩全市前茅，连年跻身复旦医院管理研究所全国医院排行榜百强。
+            </p>
+            <div class="map">
+                <img src="img/map.png" alt="">
+            </div>
+            <div class="address_container">
+                <div class="address">
+                    <div class="address_line">
+                        <img src="img/icon_address.png" alt="">
+                        <span>上海市杨浦区政民路507号</span>
+                    </div>
+                    <div class="address_line">
+                        <img src="img/icon_tel.png" alt="">
+                        <span>021-65115006</span>
+                    </div>
+                </div>
+                <a href="tel:021-65115006" class="phone_btn">
+                    <img src="img/phone_btn.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        $(function() {
+            // 操作顶部tab
+            $(document).on('click', '#tabContainer a', function() {
+                const index = $(this).index()
+                $('.top_tab_page').eq(index).addClass('active').siblings().removeClass('active')
+                $(this).addClass('top_active').siblings().removeClass('top_active')
+            })
+            $('#footer').load('footer.html', function () {
+                $('.tabs').eq(2).addClass('active').siblings().removeClass('active')
+                $('.tabs').click(function () {
+                    const index = $(this).index()
+                    $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
+                })
+            })
+        })
+    </script>
+</body>
+</html>

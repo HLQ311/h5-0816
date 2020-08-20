@@ -19,10 +19,91 @@
     <div class="top_tab_page">中心简介</div>
 
     <!--  PI介绍  -->
-    <div class="top_tab_page">PI介绍</div>
+    <div class="top_tab_page introduction active" id="scrollView">
+      <ul id="list">
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+
+        <li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+    </div>
 
     <!--  联系我们  -->
-    <div class="top_tab_page contact_us_container active">
+    <div class="top_tab_page contact_us_container">
         <h1 class="title">联系我们</h1>
         <div class="main">
             <p class="content_text">
@@ -49,6 +130,7 @@
         </div>
     </div>
     <footer id="footer"></footer>
+    <script src="js/scrollVIew.js"></script>
     <script>
         $(function() {
             // 操作顶部tab
@@ -63,6 +145,36 @@
                     const index = $(this).index()
                     $('.tab_pages').eq(index).addClass('active').siblings().removeClass('active')
                 })
+            })
+
+            function fetchData(changeLoadingStatus, appendFunc) {
+                setTimeout(() => {
+                    // mock data
+                    let data = ''
+                    changeLoadingStatus(false); // 必须实现
+                    [...new Array(10)].forEach((item, index) => {
+                        const itemCard = `<li class="introduction_card">
+          <img src="img/map.png" alt="">
+          <div class='introduction_card_right'>
+            <h3>
+              ${index}骆福添
+              <span> 急诊科主任</span>
+            </h3>
+            <div class="introduction_card_description">
+              介绍：中山大学公共卫生学院医学统计与流行病学系教授、博士生导师，1973年从事卫生统计学教学工作至今，历任中华预防医学
+            </div>
+          </div>
+        </li>`
+                        data += itemCard
+                    })
+                    appendFunc(data) // 必须实现
+                }, 800)
+            }
+
+
+            $('#scrollView').scrollLoadMore({
+                listId: 'list',
+                getNextPageData: fetchData,
             })
         })
     </script>

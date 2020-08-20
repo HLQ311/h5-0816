@@ -32,6 +32,7 @@
   padding-bottom: 0.5rem;
 }
 .top_tab_page {
+    flex: 1;
   display: none;
 }
 .top_tab_page.active {
@@ -112,5 +113,58 @@
   width: 0.21rem;
   height: 0.21rem;
   margin-right: 0.1rem;
+}
+.introduction {
+    padding: 0.2rem 0.15rem 0.16rem 0.15rem;
+    background-color: #fff;
+    flex: 1;
+    overflow: scroll;
+    padding-bottom: 0.5rem;
+}
+.introduction_card{
+    display: flex;
+    cursor: pointer;
+    box-shadow: 0px 0px 14px 1px rgba(51, 51, 51, 0.1);
+    border-radius: 0.05rem;
+    height: 1.13rem;
+    padding: 0.18rem 0.15rem;
+    background: #fff;
+    margin-bottom: 0.16rem;
+}
+.introduction_card img{
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+.introduction_card_right{
+    margin-left: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.introduction_card_right h3{
+    font-size: 0.15rem;
+    color: #333;
+    font-weight: 500;
+}
+.introduction_card_right h3 span{
+    margin-left: 0.1rem;
+    font-size: 0.12rem;
+    color: #9A9A9A;
+    font-weight: normal;
+}
+.introduction_card_description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    color: #666;
+    margin-top:0.04rem;
+    /*line-height: 0.2rem;*/
+    font-size: 0.11rem;
+    word-break: break-all;
+    text-align: justify;
 }
 /*# sourceMappingURL=aboutUs.css.map */
