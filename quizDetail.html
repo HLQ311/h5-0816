@@ -231,6 +231,7 @@
                 });
                 return
             }
+            console.log(width)
             $('#scrollContainer').animate({
                 left: '-=' + width + 'px'
             }, function() {
@@ -261,6 +262,12 @@
             } else {
                 $(this).parent().removeClass('active')
             }
+        })
+
+        $('.quiz_card').each(function() {
+            // console.log(document.documentElement.style.fontSize = 1px)
+            const screenWidth = document.body.clientWidth
+            $(this).css({ width: `${screenWidth * 340 / 375}px`, marginLeft: screenWidth * 17.5 / 375, marginRight: screenWidth * 17.5 / 375 })
         })
     })
 </script>
