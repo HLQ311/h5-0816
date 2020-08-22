@@ -51,9 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  margin: 0 0.175rem;
   flex-shrink: 0;
-  width: 3.4rem;
 }
 .card_header {
   margin: 0 0.05rem;
