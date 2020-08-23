@@ -6,7 +6,7 @@
   margin: 0 0.12rem 0.15rem;
   height: 1.45rem;
   background: url(../img/quiz_portrait.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
