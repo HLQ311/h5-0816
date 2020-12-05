@@ -1,0 +1,28 @@
+.container{
+    border: 1px solid #ddd;
+    border-radius: 0.08rem;
+    margin: 0.1rem;
+    padding: 0.1rem 0.2rem;
+}
+.title{
+    font-size: 0.2rem;
+    color: rgb(194, 74, 84);
+    margin-bottom: 0.3rem;
+}
+.content{
+    color: #333;
+    line-height: 0.2rem;
+    margin-bottom: 0.2rem
+}
+.remark p{
+    margin-bottom: 0.2rem;
+}
+.remark-title{
+    font-weight: bold;
+}
+.theme{
+    color: #0093d9;
+}
+.notice{
+    color: rgb(194, 74, 84);
+}

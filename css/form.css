@@ -1,0 +1,74 @@
+body{
+    padding: 0.15rem;
+    background-color: #fff;
+}
+.container{
+    border: 1px solid #ddd;
+    border-radius: 0.08rem;
+    flex: 1;
+    margin-bottom: 0.15rem;
+}
+.form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1rem 0.2rem;
+    border-bottom: 1px solid #ddd;
+}
+.form-header h2{
+    font-weight: bold;
+    color: #333;
+    font-size: 0.16rem;
+    flex: 1;
+    margin-right: 0.3rem;
+}
+.form-header img{
+    width: 0.2rem;
+    height: 0.2rem;
+}
+.form{
+    padding: 0.2rem;
+}
+.form-desc{
+    background-color: rgb(245,194,69);
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0 0.2rem;
+    border-radius: 0.08rem;
+    color: #666;
+}
+.form-item{
+    margin-top: 0.2rem;
+}
+.form-item h3{
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+.form-control-container{
+    width: 100%;
+}
+.form-control{
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-radius: 0.08rem;
+    padding: 0.1rem;
+    color: #666;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.2rem;
+}
+.btn-container button{
+    height: 0.4rem;
+    width: 0.6rem;
+    text-align: center;
+    line-height: 0.4rem;
+    color: #fff;
+    background-color: #0093D9;
+    border-radius: 0.06rem;
+    font-size: 0.16rem;
+}

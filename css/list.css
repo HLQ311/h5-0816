@@ -1,0 +1,44 @@
+.container {
+    overflow: scroll;
+    flex: 1;
+    background-color: #f1f1f1;
+}
+.list{
+    padding: 0 0.15rem;
+    padding-top: 0.15rem;
+}
+.list-item{
+    border-radius: 0.05rem;
+    border: 1px solid #ddd;
+    margin-bottom: 0.15rem;
+    background-color: #fff;
+}
+.list-header{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0 0.2rem;
+    background-color: rgb(246,246,246);
+}
+.list-body{
+    border-top: 1px solid #ddd;
+    padding: 0.12rem;
+}
+.list-body-options{
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+    border-radius: 0.06rem;
+    font-weight: bold;
+}
+.list-body-options:first-child{
+    margin-top: 0;
+}
+.list-body-options.odd{
+    color: rgb(101, 120, 101);
+    background-color: rgb(226,238,222);
+    border: 1px solid rgb(231,239,226);
+}
+.list-body-options.even{
+    color: rgb(71, 96, 114);
+    border: 1px solid rgb(215,236,239);
+    background-color: rgb(220,235,246);
+}

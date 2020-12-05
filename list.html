@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/list.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/init.js"></script>
+</head>
+<body>
+<div class="container" id="scrollView">
+  <ul class="list" id="list">
+    <li class="list-item">
+      <div class="list-header">
+        <p>根据均值计算样本量（计量资料）</p>
+      </div>
+      <div class="list-body">
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+      </div>
+    </li>
+
+    <li class="list-item">
+      <div class="list-header">
+        <p>根据均值计算样本量（计量资料）</p>
+      </div>
+      <div class="list-body">
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+      </div>
+    </li>
+
+    <li class="list-item">
+      <div class="list-header">
+        <p>根据均值计算样本量（计量资料）</p>
+      </div>
+      <div class="list-body">
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+      </div>
+    </li>
+
+    <li class="list-item">
+      <div class="list-header">
+        <p>根据均值计算样本量（计量资料）</p>
+      </div>
+      <div class="list-body">
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="js/scrollVIew.js"></script>
+<script>
+    $(function() {
+        function fetchData(changeLoadingStatus, appendFunc) {
+            setTimeout(() => {
+                // mock data
+                let data = ''
+                changeLoadingStatus(false); // 必须实现
+                [...new Array(10)].forEach((item, index) => {
+                    const itemCard = `<li class="list-item">
+      <div class="list-header">
+        <p>根据均值计算样本量（计量资料）</p>
+      </div>
+      <div class="list-body">
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options odd">
+          单组均值与固定值比较
+        </div>
+        <div class="list-body-options even">
+          单组均值与固定值比较
+        </div>
+      </div>
+    </li>`
+                    data += itemCard
+                })
+                appendFunc(data) // 必须实现
+            }, 1000)
+        }
+
+
+        $('#scrollView').scrollLoadMore({
+            listId: 'list',
+            getNextPageData: fetchData,
+        })
+    })
+</script>
+</body>
+</html>
